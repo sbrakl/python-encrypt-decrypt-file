@@ -1,6 +1,6 @@
 from shabcrypto import shabscrypto
 
-password = "1234567890123456"
+password = "r5RRfkvdZesRxlHHHVqyOndNf6g7y7mcVbghoWwh2kA="
 filename = "../secret.txt"
 encryptfilename = "../secret.txt.aes"
 s = shabscrypto(password)

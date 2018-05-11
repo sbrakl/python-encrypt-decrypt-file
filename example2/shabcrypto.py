@@ -4,7 +4,14 @@ import base64
 
 class shabscrypto():
     def __init__(self, password):
-        self.password = password.rjust(16,'#')        
+        l = len(password)
+        if l > 16:
+            p = password[0:16]
+        elif l < 16:
+            p = password.rjust(16,'#')
+        else:
+            p = password
+        self.password = p
 
     def encrypt(self, data):        
         iv = Random.new().read(AES.block_size)        
